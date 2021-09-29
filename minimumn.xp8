@@ -1,0 +1,5 @@
+Input "Margin of err: ",A
+Input "Conf. interv.: ",B
+Disp A
+Disp B
+Disp (0.5*0.5)/((A*A)/(invNorm((1-B)/2)*invNorm((1-B)/2)))
