@@ -1,0 +1,55 @@
+Menu(" Type of data ","Quantitative (data w/units)",QU,"Categorical (perc. or prop.)",CA
+Lbl QU
+Menu(" Are the data paired? ","Yes",PD,"No",NP)
+Lbl PD
+Menu(" Estimate or make decision? ","Estimate",EA,"Make decision",MA
+Lbl EA
+Disp "Paired t-interval"
+Goto FN
+Lbl MA
+Disp "Paired t-test"
+Goto FN
+Lbl NP
+Menu(" How many samples? ","1",OA,"2",TA
+Lbl OA
+Menu(" Estimate or make decision? ","Estimate",EB,"Make decision",MB
+Lbl EB
+Disp "1-sample t-interval"
+Goto FN
+Lbl MB
+Disp "1-sample t-test"
+Goto FN
+Lbl TA
+Menu(" Estimate or make decision? ","Estimate",EC,"Make decision",MC
+Lbl EC
+Disp "2-sample t-interval"
+Goto FN
+Lbl MC
+Disp "2-sample t-test"
+Goto FN
+
+Lbl CA
+Menu(" How many samples? ","1",OB,"2",TB
+Lbl OB
+Menu(" Estimate or make decision? ","Estimate",ED,"Make decision",MD
+Lbl ED
+Disp "1-prop z-interval"
+Goto FN
+Lbl MD
+Disp "1-prop z-test"
+Goto FN
+Lbl TB
+Menu(" Estimate or make decision? ","Estimate",EE,"Make decision",ME
+Lbl EE
+Disp "2-prop z-interval"
+Goto FN
+Lbl ME
+Disp "2-prop z-test"
+Goto FN
+
+
+Lbl FN
+Disp "Rem: write hypotheses"
+Disp "define vars and subscr."
+Disp "meaning of vars in formu."
+Disp "Test infer - 10%,np>10,SRS"
