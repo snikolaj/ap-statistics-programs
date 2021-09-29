@@ -1,0 +1,16 @@
+Menu(" What do you have? ","N+P",NP,"Mean",ME)
+
+Lbl NP
+Input "N: ",A
+Input "Probability: ",B
+Disp "Standard deviation: "
+Disp √(A*B*(1-B))
+Disp "Variance: "
+Disp A*B*(1-B)
+Goto FN
+
+Lbl ME
+Disp "sqr(1-1/A)/(1/A)
+
+
+Lbl FN
