@@ -1,0 +1,53 @@
+Menu(" Select your data ","Only N successes",ON,"At most N successes",AM,"Less than N (w/o N)",LT,"More than N successes",MT,"At least N successes",AL,"Trials until success",US,"At most trials until...",AS,"How many...",HM)
+Lbl ON
+Input "Trials: ",A
+Input "Probability: ",B
+Input "Successes: ",C
+Disp binompdf(A,B,C)
+Goto FN
+
+Lbl AM
+Input "Trials: ",A
+Input "Probability: ",B
+Input "Successes: ",C
+Disp binomcdf(A,B,C)
+Goto FN
+
+Lbl LT
+Input "Trials: ",A
+Input "Probability: ",B
+Input "Successes: ",C
+Disp binomcdf(A,B,C-1)
+Goto FN
+
+Lbl MT
+Input "Trials: ",A
+Input "Probability: ",B
+Input "Successes: ",C
+Disp 1-binomcdf(A,B,C)
+Goto FN
+
+Lbl AL
+Input "Trials: ",A
+Input "Probability: ",B
+Input "Successes: ",C
+Disp 1-binomcdf(A,B,C-1)
+Goto FN
+
+Lbl US
+Input "Trials: ",A
+Input "Probability: ",B
+Disp geometpdf(B,A)
+Goto FN
+
+Lbl AS
+Input "Trials: ",A
+Input "Probability: ",B
+Disp geometcdf(B,A)
+Goto FN
+
+Lbl HM
+Input "Probability:",B
+Disp 1/B
+
+Lbl FN
